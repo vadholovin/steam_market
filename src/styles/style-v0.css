@@ -1,0 +1,886 @@
+.header,
+.promo-static,
+.info_link,
+.footer-text-wrap
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+body
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    line-height: 1.3em;
+
+    color: #bbb9b7;
+    background: #193f58;
+}
+
+.container
+{
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.header
+{
+    position: relative;
+}
+
+.header-wrap
+{
+    text-transform: uppercase;
+
+    background: #171a21;
+}
+
+.header .logo
+{
+    width: 18%;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+@media (min-width: 1000px)
+{
+    .header .logo
+    {
+        padding-left: 0;
+    }
+}
+
+.header .menu-toggle
+{
+    font-size: 25px;
+
+    position: absolute;
+    right: 147px;
+    bottom: 18px;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+@media (min-width: 800px)
+{
+    .header .menu-toggle
+    {
+        display: none;
+    }
+}
+
+.header .menu-toggle:focus + .header-menu-wrap,
+.header .menu-toggle:active + .header-menu-wrap
+{
+    display: block;
+}
+
+.header-menu
+{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+
+    background: #171a21;
+}
+
+@media (min-width: 800px)
+{
+    .header-menu
+    {
+        padding-bottom: 0;
+
+        background-color: transparent;
+    }
+}
+
+.header-menu-item
+{
+    display: block;
+
+    padding: 7px 0;
+}
+
+@media (min-width: 800px)
+{
+    .header-menu-item
+    {
+        display: inline-block;
+
+        padding: 0 7px;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .header-menu-item
+    {
+        padding: 0 17px;
+    }
+}
+
+.header-menu-item:hover
+{
+    color: #fff;
+}
+
+.header-menu-wrap
+{
+    position: absolute;
+    z-index: 5;
+    top: 12px;
+    right: 0;
+
+    display: none;
+
+    width: 100%;
+    padding-top: 50px;
+}
+
+@media (min-width: 600px)
+{
+    .header-menu-wrap
+    {
+        width: 55%;
+    }
+}
+
+@media (min-width: 800px)
+{
+    .header-menu-wrap
+    {
+        position: static;
+
+        display: block;
+
+        width: 57%;
+        padding-top: 0;
+
+        text-align: left;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .header-menu-wrap
+    {
+        width: 58%;
+    }
+}
+
+.header-menu-wrap:hover
+{
+    display: block;
+}
+
+.header .enter_steam
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: block;
+
+    width: auto;
+    padding: 20px 7px 23px;
+
+    text-align: center;
+
+    background: #117113;
+}
+
+.header .enter_steam:hover
+{
+    background: #0da311;
+}
+
+@media (min-width: 800px)
+{
+    .header .enter_steam
+    {
+        width: 18%;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .header .enter_steam
+    {
+        width: 20%;
+        padding: 20px 0 23px 75px;
+
+        text-align: left;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .header .enter_steam:before
+    {
+        position: absolute;
+        top: 22px;
+        left: 14px;
+
+        width: 55px;
+        height: 30px;
+
+        content: '';
+
+        background: url(../images/enter_icon.png) no-repeat;
+    }
+}
+
+.header .enter_steam:hover
+{
+    color: #fff;
+}
+
+.promo
+{
+    position: relative;
+
+    display: none;
+
+    width: 100%;
+    max-width: 1400px;
+    height: 365px;
+    margin: auto;
+
+    background: url(../images/bg-promo.png) center center no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 1000px)
+{
+    .promo
+    {
+        display: block;
+    }
+}
+
+.promo-text
+{
+    position: absolute;
+    top: 119px;
+
+    width: 100%;
+    padding: 17px 0 28px;
+}
+
+.promo-static-item
+{
+    text-align: center;
+}
+
+.promo-static-item:hover
+{
+    color: #fff;
+}
+
+.promo-static-item span
+{
+    display: block;
+}
+
+.promo-static-number
+{
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.promo-static-text
+{
+    font-size: 16px;
+}
+
+.info_link
+{
+    font-size: 17px;
+
+    padding: 20px 0 16px;
+
+    text-align: center;
+}
+
+@media (min-width: 1000px)
+{
+    .info_link
+    {
+        font-size: 20px;
+
+        text-align: left;
+    }
+}
+
+.info_link-item
+{
+    width: 50%;
+}
+
+@media (min-width: 600px)
+{
+    .info_link-item
+    {
+        width: 33%;
+    }
+}
+
+@media (min-width: 800px)
+{
+    .info_link-item
+    {
+        width: auto;
+    }
+}
+
+.info_link-link
+{
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding-left: 27px;
+}
+
+@media (min-width: 800px)
+{
+    .info_link-link
+    {
+        margin-bottom: 0;
+    }
+}
+
+.info_link-link:hover
+{
+    color: #fff;
+}
+
+.info_link-link .fa
+{
+    font-size: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info_link-link:hover .fa
+{
+    color: #fff;
+}
+
+.table_play
+{
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 600px)
+{
+    .table_play
+    {
+        max-width: 980px;
+    }
+}
+
+.table_play tr:nth-child(1n)
+{
+    margin-bottom: 6px;
+
+    background: #0e1d2b;
+}
+
+.table_play tr:nth-child(2n)
+{
+    background: transparent;
+}
+
+.table_play tr:nth-child(2n) td
+{
+    height: 6px;
+}
+
+.table_play th
+{
+    font-size: 16px;
+
+    display: none;
+
+    padding: 10px 0 8px;
+
+    text-align: left;
+
+    color: #0da311;
+}
+
+@media (min-width: 600px)
+{
+    .table_play th
+    {
+        display: table-cell;
+    }
+}
+
+.table_play-item
+{
+    display: none;
+
+    vertical-align: middle;
+}
+
+@media (min-width: 600px)
+{
+    .table_play-item
+    {
+        display: table-cell;
+    }
+}
+
+.table_play-item:first-child
+{
+    display: table-cell;
+
+    width: 60px;
+}
+
+@media (min-width: 600px)
+{
+    .table_play-item:first-child
+    {
+        width: auto;
+    }
+}
+
+.table_play-item:last-child
+{
+    display: table-cell;
+
+    text-align: center;
+
+    background: #122334;
+}
+
+.table_play-item:last-child a
+{
+    display: block;
+
+    padding: 20px 0;
+}
+
+.table_play-item:last-child a:hover
+{
+    color: #fff;
+}
+
+.chat
+{
+    padding: 10px;
+
+    background: #193f58;
+}
+
+.chat-wrap
+{
+    margin-bottom: 40px;
+    padding: 10px;
+
+    background: #0e1d2b;
+}
+
+.chat-title
+{
+    margin-top: 0;
+}
+
+.chat-text
+{
+    width: 100%;
+    max-width: 954px;
+    height: 160px;
+}
+
+.chat textarea
+{
+    display: block;
+
+    width: 100%;
+
+    border-color: #0e1d2b;
+    background: #193f58;
+}
+
+.chat input
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    color: #bbb9b7;
+    border: none;
+    border: 1px solid #0e1d2b;
+    background: #193f58;
+}
+
+.chat input:hover
+{
+    color: #fff;
+}
+
+.footer-wrap
+{
+    padding: 20px 0 35px;
+
+    background: #171a21;
+}
+
+.footer-text
+{
+    width: 65%;
+}
+
+@media (min-width: 800px)
+{
+    .footer-text
+    {
+        width: 80%;
+    }
+}
+
+.footer-attested
+{
+    width: 23%;
+}
+
+@media (min-width: 800px)
+{
+    .footer-attested
+    {
+        width: 16%;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .footer-attested
+    {
+        width: 10%;
+    }
+}
+
+.footer-attested p
+{
+    width: 96px;
+    margin-bottom: 2px;
+    padding-left: 7px;
+
+    background: #4e4e4e;
+}
+
+.footer-pay-col
+{
+    display: inline-block;
+}
+
+.footer-pay-col:first-child
+{
+    padding-left: 8px;
+}
+
+.footer-pay-col:last-child
+{
+    display: block;
+
+    padding: 10px 0 0 100px;
+}
+
+@media (min-width: 600px)
+{
+    .footer-pay-col:last-child
+    {
+        display: inline-block;
+
+        padding: 0;
+    }
+}
+
+.icon-pay_1
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: 0;
+}
+
+.icon-pay_1:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_2
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -32px;
+}
+
+.icon-pay_2:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_3
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -64px;
+}
+
+.icon-pay_3:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_4
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -96px;
+}
+
+.icon-pay_4:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_5
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -128px;
+}
+
+.icon-pay_5:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_6
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -160px;
+}
+
+.icon-pay_6:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_7
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -192px;
+}
+
+.icon-pay_7:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_8
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -224px;
+}
+
+.icon-pay_8:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_9
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -256px;
+}
+
+.icon-pay_9:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_10
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -288px;
+}
+
+.icon-pay_10:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_11
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -320px;
+}
+
+.icon-pay_11:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_12
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -352px;
+}
+
+.icon-pay_12:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_13
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -384px;
+}
+
+.icon-pay_13:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_14
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -416px;
+}
+
+.icon-pay_14:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_15
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -448px;
+}
+
+.icon-pay_15:hover
+{
+    opacity: .8;
+}
+
+.icon-pay_16
+{
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -480px;
+}
+
+.icon-pay_16:hover
+{
+    opacity: .8;
+}

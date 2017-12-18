@@ -1,0 +1,208 @@
+doctype html
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	link(href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet")
+	link(rel="stylesheet" href="styles/font-awesome.css")
+	link(rel="stylesheet", href="styles/reset.css")
+	link(rel="stylesheet", href="vendor/jquery-custom-scrollbar-master/jquery.custom-scrollbar.css")
+	link(rel="stylesheet", href="styles/style.css")
+	title= title
+body
+	.header-wrap
+			.container
+				header.header
+					a(href="#").logo
+						img(src="uploads/logo.png")
+					.menu-toggle
+						i.fa.fa-bars(aria-hidden="true")
+					.header-menu-wrap
+						nav.header-menu
+							each item in menuHeader_items
+								a(href="#").header-menu-item= item
+					a(href="#").enter_steam ВОЙТИ ЧЕРЕЗ STEAM
+	.promo
+		.promo-text
+			.container
+				.promo-static
+					each item in promoStatic_item
+						.promo-static-item
+							span.promo-static-number= item.number
+							span.promo-static-text= item.text
+	.container
+		.info_link
+			.info_link-item
+				a(href="#").info_link-link Лидер продаж
+					i.fa.fa-rub(aria-hidden="true")
+			.info_link-item
+				a(href="#").info_link-link Максимальная скидка
+					i.fa.fa-percent(aria-hidden="true")
+			.info_link-item
+				a(href="#").info_link-link Сейчас на сайте
+					i.fa.fa-wifi(aria-hidden="true")
+			.info_link-item
+				a(href="#").info_link-link Сумма баланса
+					i.fa.fa-plus(aria-hidden="true")
+			.info_link-item
+				a(href="#").info_link-link Максимум отзывов
+					i.fa.fa-commenting(aria-hidden="true")
+		.table_play-wrap
+			table.table_play
+				tr
+					th
+					th Аккаунт 
+					th Статус
+					th Коф.скидки
+					th Баланс
+					th Кол.отзывов
+					th Игры VAC
+					th
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_1.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item ewgenonegin
+					td.table_play-item в сети
+					td.table_play-item 0,73
+					td.table_play-item 650
+					td.table_play-item 0
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_2.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item Staln
+					td.table_play-item офлайн
+					td.table_play-item 0,80
+					td.table_play-item 1580  
+					td.table_play-item 50 
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_3.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item maks
+					td.table_play-item в сети
+					td.table_play-item 0,62
+					td.table_play-item 12000
+					td.table_play-item 2
+					td.table_play-item да
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_4.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item Santamara
+					td.table_play-item в сети
+					td.table_play-item 0,92
+					td.table_play-item 5000
+					td.table_play-item 140
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_2.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item Staln
+					td.table_play-item офлайн
+					td.table_play-item 0,80
+					td.table_play-item 1580  
+					td.table_play-item 50 
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_4.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item Santamara
+					td.table_play-item в сети
+					td.table_play-item 0,92
+					td.table_play-item 5000
+					td.table_play-item 140
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_3.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item maks
+					td.table_play-item в сети
+					td.table_play-item 0,62
+					td.table_play-item 12000
+					td.table_play-item 2
+					td.table_play-item да
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+				tr
+					td
+				tr
+					td.table_play-item
+						img(src=`uploads/game_picture_1.jpg`, width="60", height="60", alt="Play image")
+					td.table_play-item ewgenonegin
+					td.table_play-item в сети
+					td.table_play-item 0,73
+					td.table_play-item 650
+					td.table_play-item 0
+					td.table_play-item нет
+					td.table_play-item
+						a(href="#") Купить игру  Steam
+		.chat-wrap
+			h2.chat-title Общий чат
+			.chat
+				.chat-text.default-skin
+					p Продам аккаунт pokemon Go Зачёркнутых нет ♣ ♣ ♣Top 35 LvL♣ ♣ ♣ Dragonite(●3276cp●) Gyarados 3112cp,400к+ пыли, 1200р------- https://funpay.ru/users/17059/ 
+					p Продам аккаунт pokemon Go Зачёркнутых нет ♣ ♣ ♣Top 33 LvL♣ ♣ ♣ Dragonite(●3346cp●) Snorlax 2677cp,400к+ пыли, 500р------- https://funpay.ru/users/17059/
+				form(action="" method="post")
+					p
+						textarea(rows="10" cols="50" name="text")
+					p
+						input(type="submit" value="Отправить")
+	.footer-wrap
+		.container
+			footer.footer
+				.footer-text-wrap
+					.footer-text
+						a(href="#").logo
+							img(src="uploads/logo.png")
+						p © 2017 Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в России и других странах. НДС включен во все цены, где он применим.
+					.footer-attested
+						p АТТЕСТОВАН
+						img(src="uploads/webmoney.jpg" width="96" height="29" alt="WebMoney logo")
+				span Мы принимаем:
+				.footer-pay-col
+					a(href="#").icon-pay_1
+					a(href="#").icon-pay_2
+					a(href="#").icon-pay_3
+					a(href="#").icon-pay_4
+					a(href="#").icon-pay_5
+					a(href="#").icon-pay_6
+					a(href="#").icon-pay_7
+					a(href="#").icon-pay_8
+				.footer-pay-col
+					a(href="#").icon-pay_9
+					a(href="#").icon-pay_10
+					a(href="#").icon-pay_11
+					a(href="#").icon-pay_12
+					a(href="#").icon-pay_13
+					a(href="#").icon-pay_14
+					a(href="#").icon-pay_15
+
+script(src="vendor/jquery/jquery-3.1.1.min.js")
+script(src="vendor/jquery-custom-scrollbar-master/jquery.custom-scrollbar.js")
+script(src="js/main.js")

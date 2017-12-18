@@ -1,0 +1,811 @@
+.header,
+.promo-static,
+.info_link,
+.footer-text-wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.3em;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #bbb9b7;
+  background: #193f58;
+}
+
+.body-flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+}
+
+.header-wrap {
+  background: #171a21;
+  text-transform: uppercase;
+}
+
+.header .logo {
+  width: 18%;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.header .menu-toggle {
+  font-size: 25px;
+  position: absolute;
+  right: 147px;
+  bottom: 18px;
+  display: block;
+  cursor: pointer;
+}
+
+.header .menu-toggle:focus + .header-menu-wrap,
+.header .menu-toggle:active + .header-menu-wrap {
+  display: block;
+}
+
+.header-menu {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #171a21;
+  text-align: center;
+}
+
+.header-menu-item {
+  display: block;
+  padding: 7px 0;
+}
+
+.header-menu-item:hover {
+  color: #fff;
+}
+
+.header-menu-wrap {
+  padding-top: 50px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  display: none;
+  z-index: 5;
+  width: 100%;
+}
+
+.header-menu-wrap:hover {
+  display: block;
+}
+
+.header .enter_steam {
+  width: auto;
+  display: block;
+  background: #117113;
+  position: relative;
+  padding: 20px 7px 23px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.header .enter_steam:hover {
+  background: #0da311;
+}
+
+.header .enter_steam:hover {
+  color: #fff;
+}
+
+.promo {
+  background: url(../images/bg-promo.png) center center no-repeat;
+  background-size: cover;
+  height: 365px;
+  position: relative;
+  display: none;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.promo-text {
+  position: absolute;
+  top: 119px;
+  width: 100%;
+  padding: 17px 0 28px;
+}
+
+.promo-static-item {
+  text-align: center;
+}
+
+.promo-static-item:hover {
+  color: #fff;
+}
+
+.promo-static-item span {
+  display: block;
+}
+
+.promo-static-number {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 32px;
+}
+
+.promo-static-text {
+  font-size: 16px;
+}
+
+.info_link {
+  padding: 20px 0 16px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.info_link-item {
+  width: 50%;
+}
+
+.info_link-link {
+  position: relative;
+  display: inline-block;
+  padding-left: 27px;
+  margin-bottom: 10px;
+}
+
+.info_link-link:hover {
+  color: #fff;
+}
+
+.info_link-link .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+}
+
+.info_link-link:hover .fa {
+  color: #fff;
+}
+
+.table_play {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.table_play tr:nth-child(1n) {
+  background: #0e1d2b;
+  margin-bottom: 6px;
+}
+
+.table_play tr:nth-child(2n) {
+  background: transparent;
+}
+
+.table_play tr:nth-child(2n) td {
+  height: 6px;
+}
+
+.table_play th {
+  padding: 10px 0 8px;
+  font-size: 16px;
+  color: #0da311;
+  text-align: left;
+  display: none;
+}
+
+.table_play-item {
+  vertical-align: middle;
+  display: none;
+}
+
+.table_play-item:first-child {
+  display: table-cell;
+  width: 60px;
+}
+
+.table_play-item:last-child {
+  display: table-cell;
+  background: #122334;
+  text-align: center;
+}
+
+.table_play-item:last-child a {
+  display: block;
+  padding: 20px 0;
+}
+
+.table_play-item:last-child a:hover {
+  color: #fff;
+}
+
+.chat {
+  background: #193f58;
+  padding: 10px;
+}
+
+.chat-wrap {
+  background: #0e1d2b;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.chat-title {
+  margin-top: 0;
+}
+
+.chat-text {
+  width: 100%;
+  max-width: 954px;
+  height: 160px;
+}
+
+.chat textarea {
+  width: 100%;
+  display: block;
+  background: #193f58;
+  border-color: #0e1d2b;
+}
+
+.chat input {
+  padding: 10px 15px;
+  background: #193f58;
+  border: none;
+  border: 1px solid #0e1d2b;
+  font-size: 20px;
+  color: #bbb9b7;
+  cursor: pointer;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.chat input:hover {
+  color: #fff;
+}
+
+.footer-wrap {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.footer-wrap {
+  background: #171a21;
+  padding: 20px 0 35px;
+}
+
+.footer-text {
+  width: 65%;
+}
+
+.footer-attested {
+  width: auto;
+  margin-right: 10px;
+}
+
+.footer-attested p {
+  background: #4e4e4e;
+  padding-left: 7px;
+  margin-bottom: 2px;
+  width: 96px;
+}
+
+.footer-pay-col {
+  display: inline-block;
+}
+
+.footer-pay-col:first-child {
+  padding-left: 8px;
+}
+
+.footer-pay-col:last-child {
+  display: block;
+  padding: 10px 0 0 100px;
+}
+
+.icon-pay_1 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: 0px;
+}
+
+.icon-pay_1:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_2 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -32px;
+}
+
+.icon-pay_2:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -64px;
+}
+
+.icon-pay_3:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_4 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -96px;
+}
+
+.icon-pay_4:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_5 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -128px;
+}
+
+.icon-pay_5:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_6 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -160px;
+}
+
+.icon-pay_6:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_7 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -192px;
+}
+
+.icon-pay_7:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_8 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -224px;
+}
+
+.icon-pay_8:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_9 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -256px;
+}
+
+.icon-pay_9:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_10 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -288px;
+}
+
+.icon-pay_10:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_11 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -320px;
+}
+
+.icon-pay_11:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_12 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -352px;
+}
+
+.icon-pay_12:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_13 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -384px;
+}
+
+.icon-pay_13:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_14 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -416px;
+}
+
+.icon-pay_14:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_15 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -448px;
+}
+
+.icon-pay_15:hover {
+  opacity: 0.8;
+}
+
+.icon-pay_16 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/sprite-pay-card.jpg) no-repeat;
+  background-position-x: -480px;
+}
+
+.icon-pay_16:hover {
+  opacity: 0.8;
+}
+
+.header-menu--user .current {
+  color: #fff;
+  background-color: #117113;
+}
+
+.user-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 16px;
+  text-transform: none;
+}
+
+.user-pic {
+  margin-left: 3px;
+}
+
+.main-title {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  padding-left: 13px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 31.2px;
+}
+
+.main-title--mb48 {
+  margin-bottom: 48px;
+}
+
+.table-user {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.table-user tr:nth-child(1n) {
+  background: #0e1d2b;
+  margin-bottom: 6px;
+}
+
+.table-user tr:nth-child(2n) {
+  background: transparent;
+}
+
+.table-user tr:nth-child(2n) td {
+  height: 6px;
+}
+
+.table-user tr:first-child {
+  background-color: transparent;
+}
+
+.table-user th {
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #0da311;
+  text-align: left;
+}
+
+.table-user__item {
+  vertical-align: middle;
+  padding: 20px 8px;
+  font-size: 18px;
+}
+
+.table-user .hide {
+  display: none;
+}
+
+.table-messages {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.table-messages thead {
+  border: 1px solid #122334;
+}
+
+.table-messages th {
+  padding: 7px 13px;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 26px;
+  text-align: left;
+  background-color: #0e1d2b;
+}
+
+.table-messages tbody {
+  border: 1px solid #0e1d2b;
+}
+
+.table-messages textarea[name="message"] {
+  height: 70px;
+  color: #bbb9b7;
+}
+
+.table-messages td:first-child {
+  width: 18.3%;
+  vertical-align: top;
+  padding: 8px 13px;
+}
+
+.table-messages td:last-child {
+  width: 81.7%;
+}
+
+.table-messages td {
+  border: 1px solid #0e1d2b;
+}
+
+.table-messages .nick-name {
+  display: block;
+  font-size: 18px;
+  line-height: 23.4px;
+  overflow-wrap: break-word;
+}
+
+.table-messages .nick-name:hover {
+  color: #0da311;
+}
+
+.table-messages .nick-name--current {
+  color: #0da311;
+}
+
+.table-messages .chat-text {
+  max-width: 100%;
+  height: 160px;
+}
+
+.table-messages .chat-text p {
+  margin-top: 0;
+  padding-right: 15px;
+  font-size: 18px;
+  line-height: 23.4px;
+  overflow-wrap: break-word;
+}
+
+.table-messages .viewport {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .header-menu-wrap {
+    width: 55%;
+  }
+
+  .info_link-item {
+    width: 33%;
+  }
+
+  .table_play {
+    max-width: 980px;
+  }
+
+  .table_play th {
+    display: table-cell;
+  }
+
+  .table_play-item {
+    display: table-cell;
+  }
+
+  .table_play-item:first-child {
+    width: auto;
+  }
+
+  .footer-pay-col:last-child {
+    padding: 0;
+    display: inline-block;
+  }
+
+  .table-user {
+    max-width: 980px;
+  }
+
+  .table-user th {
+    padding: 0 13px;
+  }
+
+  .table-user__item {
+    padding: 20px 13px;
+  }
+
+  .table-user .hide {
+    display: table-cell;
+  }
+}
+
+@media (min-width: 800px) {
+  .header .menu-toggle {
+    display: none;
+  }
+
+  .header-menu {
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+
+  .header-menu-item {
+    display: inline-block;
+    padding: 0 7px;
+  }
+
+  .header-menu-wrap {
+    padding-top: 0;
+    display: block;
+    text-align: left;
+    position: static;
+    width: 57%;
+  }
+
+  .header .enter_steam {
+    width: 18%;
+  }
+
+  .info_link-item {
+    width: auto;
+  }
+
+  .info_link-link {
+    margin-bottom: 0;
+  }
+
+  .footer-text {
+    width: 80%;
+  }
+
+  .footer-attested {
+    width: 16%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header .logo {
+    padding-left: 0;
+  }
+
+  .header-menu-item {
+    padding: 0 17px;
+  }
+
+  .header-menu-wrap {
+    width: 58%;
+  }
+
+  .header .enter_steam {
+    width: 20%;
+    text-align: left;
+    padding: 20px 0 23px 75px;
+  }
+
+  .header .enter_steam:before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 14px;
+    width: 55px;
+    height: 30px;
+    background: url(../images/enter_icon.png) no-repeat;
+  }
+
+  .promo {
+    display: block;
+  }
+
+  .info_link {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .footer-attested {
+    width: 10%;
+  }
+
+  .header-menu--user {
+    padding-top: 0;
+  }
+
+  .header-menu--user .header-menu-item {
+    line-height: 64px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

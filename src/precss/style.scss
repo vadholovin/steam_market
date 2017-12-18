@@ -1,0 +1,505 @@
+$mobile-up: "(min-width: 600px)";
+$tablet-up: "(min-width: 800px)";
+$desktop-up: "(min-width: 1000px)";
+
+@mixin mobile {
+  @media #{$mobile-up} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet-up} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop-up} {
+    @content;
+  }
+}
+
+%flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.3em;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #bbb9b7;
+  background: #193f58;
+}
+
+.body-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header {
+  @extend %flexbox;
+
+  position: relative;
+
+  &-wrap {
+    background: #171a21;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    width: 18%;
+    padding-top: 20px;
+    padding-left: 15px;
+
+    @include desktop {
+      padding-left: 0;
+    }
+  }
+
+  .menu-toggle {
+    font-size: 25px;
+    position: absolute;
+    right: 147px;
+    bottom: 18px;
+    display: block;
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .menu-toggle:focus + .header-menu-wrap,
+  .menu-toggle:active + .header-menu-wrap {
+    display: block;
+  }
+
+  &-menu {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #171a21;
+    text-align: center;
+
+    @include tablet {
+      padding-bottom: 0;
+      background-color: transparent;
+    }
+
+
+    &-item {
+      display: block;
+      padding: 7px 0;
+
+      @include tablet {
+        display: inline-block;
+        padding: 0 7px;
+      }
+
+
+      @include desktop {
+        padding: 0 17px;
+      }
+
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &-wrap {
+      padding-top: 50px;
+      position: absolute;
+      top: 12px;
+      right: 0;
+      display: none;
+      z-index: 5;
+      width: 100%;
+
+      @include mobile {
+        width: 55%;
+      }
+
+
+      @include tablet {
+        padding-top: 0;
+        display: block;
+        text-align: left;
+        position: static;
+        width: 57%;
+      }
+
+
+      @include desktop {
+        width: 58%;
+      }
+    }
+
+    &-wrap:hover {
+      display: block;
+    }
+  }
+
+  .enter_steam {
+    width: auto;
+    display: block;
+    background: #117113;
+    position: relative;
+    padding: 20px 7px 23px;
+    font-size: 14px;
+    text-align: center;
+
+    &:hover {
+      background: #0da311;
+    }
+
+    @include tablet {
+      width: 18%;
+    }
+
+
+    @include desktop {
+      width: 20%;
+      text-align: left;
+      padding: 20px 0 23px 75px;
+    }
+
+
+    &:before {
+      @include desktop {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 14px;
+        width: 55px;
+        height: 30px;
+        background: url(../images/enter_icon.png) no-repeat;
+      }
+    }
+  }
+
+  .enter_steam:hover {
+    color: #fff;
+  }
+}
+
+.promo {
+  background: url(../images/bg-promo.png) center center no-repeat;
+  background-size: cover;
+  height: 365px;
+  position: relative;
+  display: none;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
+  @include desktop {
+    display: block;
+  }
+
+
+  &-text {
+    position: absolute;
+    top: 119px;
+    width: 100%;
+    padding: 17px 0 28px;
+  }
+
+  &-static {
+    @extend %flexbox;
+
+    &-item {
+      text-align: center;
+
+      &:hover {
+        color: #fff;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    &-number {
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 32px;
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+  }
+}
+
+.info_link {
+  @extend %flexbox;
+
+  padding: 20px 0 16px;
+  font-size: 17px;
+  text-align: center;
+
+  @include desktop {
+    font-size: 20px;
+    text-align: left;
+  }
+
+
+  &-item {
+    width: 50%;
+
+    @include mobile {
+      width: 33%;
+    }
+
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  &-link {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+
+    &:hover {
+      color: #fff;
+    }
+
+    .fa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 20px;
+    }
+
+    &:hover .fa {
+      color: #fff;
+    }
+  }
+}
+
+.table_play {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 25px;
+
+  @include mobile {
+    max-width: 980px;
+  }
+
+
+  tr:nth-child(1n) {
+    background: #0e1d2b;
+    margin-bottom: 6px;
+  }
+
+  tr:nth-child(2n) {
+    background: transparent;
+
+    td {
+      height: 6px;
+    }
+  }
+
+  th {
+    padding: 10px 0 8px;
+    font-size: 16px;
+    color: #0da311;
+    text-align: left;
+    display: none;
+
+    @include mobile {
+      display: table-cell;
+    }
+  }
+
+  &-item {
+    vertical-align: middle;
+    display: none;
+
+    @include mobile {
+      display: table-cell;
+    }
+  }
+
+  &-item:first-child {
+    display: table-cell;
+    width: 60px;
+
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  &-item:last-child {
+    display: table-cell;
+    background: #122334;
+    text-align: center;
+
+    a {
+      display: block;
+      padding: 20px 0;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+.chat {
+  background: #193f58;
+  padding: 10px;
+
+  &-wrap {
+    background: #0e1d2b;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+
+  &-title {
+    margin-top: 0;
+  }
+
+  &-text {
+    width: 100%;
+    max-width: 954px;
+    height: 160px;
+  }
+
+  textarea {
+    width: 100%;
+    display: block;
+    background: #193f58;
+    border-color: #0e1d2b;
+  }
+
+  input {
+    padding: 10px 15px;
+    background: #193f58;
+    border: none;
+    border: 1px solid #0e1d2b;
+    font-size: 20px;
+    color: #bbb9b7;
+    cursor: pointer;
+    font-family: "PT Sans Narrow", sans-serif;
+  }
+
+  input:hover {
+    color: #fff;
+  }
+}
+
+.footer-wrap {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.footer {
+  
+  &-wrap {
+    background: #171a21;
+    padding: 20px 0 35px;
+  }
+
+  &-text {
+    width: 65%;
+
+    @include tablet {
+      width: 80%;
+    }
+
+
+    &-wrap {
+      @extend %flexbox;
+    }
+  }
+
+  &-attested {
+    // width: 23%;
+    width: auto;
+    margin-right: 10px;
+
+    @include tablet {
+      width: 16%;
+    }
+
+
+    @include desktop {
+      width: 10%;
+    }
+
+
+    p {
+      background: #4e4e4e;
+      padding-left: 7px;
+      margin-bottom: 2px;
+      width: 96px;
+    }
+  }
+
+  &-pay-col {
+    display: inline-block;
+  }
+
+  &-pay-col:first-child {
+    padding-left: 8px;
+  }
+
+  &-pay-col:last-child {
+    display: block;
+    padding: 10px 0 0 100px;
+
+    @include mobile {
+      padding: 0;
+      display: inline-block;
+    }
+  }
+}
+
+$icons: "pay_1", "pay_2", "pay_3", "pay_4", "pay_5", "pay_6", "pay_7", "pay_8", "pay_9", "pay_10", "pay_11", "pay_12", "pay_13", "pay_14", "pay_15", "pay_16";
+
+@for $i from 0 to length($icons) {
+  .icon-#{nth($icons, $i + 1)} {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/sprite-pay-card.jpg) no-repeat;
+    background-position-x: -(32px * $i);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@import 'purchases';
+@import 'messages';

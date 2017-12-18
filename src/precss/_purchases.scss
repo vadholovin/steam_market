@@ -1,0 +1,106 @@
+// ========================================
+// Purchases
+// ========================================
+
+.header-menu--user {
+  @media (min-width: 1000px) {
+    padding-top: 0;
+  }
+    
+  .header-menu-item {
+    
+    @media (min-width: 1000px) {
+      line-height: 64px;
+    }
+  }
+
+  .current {
+    color: #fff;
+    background-color: #117113;
+  }
+}
+
+.user-box {
+  display: flex;
+  align-items: center; 
+}
+
+.user-name {
+  font-size: 16px;
+  text-transform: none;
+}
+
+.user-pic {
+  margin-left: 3px;
+}
+
+.main-title {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  padding-left: 13px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 31.2px;
+}
+
+.main-title--mb48 {
+  margin-bottom: 48px;
+}
+
+.table-user {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 25px;
+
+  @include mobile {
+    max-width: 980px;
+  }
+  
+  tr:nth-child(1n) {
+    background: #0e1d2b;
+    margin-bottom: 6px;
+  }
+
+  tr:nth-child(2n) {
+    background: transparent;
+
+    td {
+      height: 6px;
+    }
+  }
+
+  tr:first-child {
+    background-color: transparent;
+  }
+
+  th {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #0da311;
+    text-align: left;
+
+    @include mobile {
+      padding: 0 13px;
+    }
+  }
+
+  &__item {
+    vertical-align: middle;
+    padding: 20px 8px;
+    font-size: 18px;
+
+    @include mobile {
+      padding: 20px 13px;
+    }
+  }
+
+  .hide {
+    display: none;
+
+    @include mobile {
+      display: table-cell;
+    }
+  }
+}
+
